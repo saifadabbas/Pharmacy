@@ -33,6 +33,7 @@ public class manager_page extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         header = new javax.swing.JPanel();
         minMaxCloseIcon = new javax.swing.JPanel();
@@ -48,7 +49,15 @@ public class manager_page extends javax.swing.JFrame {
         menuback = new javax.swing.JPanel();
         IconMenu = new javax.swing.JLabel();
         menuHide = new javax.swing.JPanel();
+        profileInfo = new javax.swing.JPanel();
+        profile = new javax.swing.JPanel();
+        profilePage = new javax.swing.JPanel();
+        profilePic = new javax.swing.JLabel();
+        managerName = new javax.swing.JLabel();
+        massages = new javax.swing.JPanel();
         main = new javax.swing.JPanel();
+        headerForMain = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -200,34 +209,87 @@ public class manager_page extends javax.swing.JFrame {
         menu.add(menuIcon, java.awt.BorderLayout.LINE_START);
 
         menuHide.setBackground(new java.awt.Color(25, 29, 74));
+        menuHide.setLayout(new java.awt.BorderLayout());
 
-        javax.swing.GroupLayout menuHideLayout = new javax.swing.GroupLayout(menuHide);
-        menuHide.setLayout(menuHideLayout);
-        menuHideLayout.setHorizontalGroup(
-            menuHideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
+        profileInfo.setBackground(new java.awt.Color(25, 29, 74));
+        profileInfo.setPreferredSize(new java.awt.Dimension(200, 150));
+        profileInfo.setLayout(new java.awt.BorderLayout());
+
+        profile.setBackground(new java.awt.Color(25, 29, 74));
+
+        profilePage.setBackground(new java.awt.Color(25, 29, 74));
+
+        profilePic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design_imgs/image 11.jpg"))); // NOI18N
+        profilePic.setPreferredSize(new java.awt.Dimension(100, 100));
+        profilePic.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                profilePicMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                profilePicMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout profilePageLayout = new javax.swing.GroupLayout(profilePage);
+        profilePage.setLayout(profilePageLayout);
+        profilePageLayout.setHorizontalGroup(
+            profilePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(profilePageLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(profilePic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        menuHideLayout.setVerticalGroup(
-            menuHideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 501, Short.MAX_VALUE)
+        profilePageLayout.setVerticalGroup(
+            profilePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, profilePageLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(profilePic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
+
+        javax.swing.GroupLayout profileLayout = new javax.swing.GroupLayout(profile);
+        profile.setLayout(profileLayout);
+        profileLayout.setHorizontalGroup(
+            profileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(profileLayout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(profilePage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(44, Short.MAX_VALUE))
+        );
+        profileLayout.setVerticalGroup(
+            profileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, profileLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(profilePage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        profileInfo.add(profile, java.awt.BorderLayout.PAGE_START);
+
+        managerName.setForeground(new java.awt.Color(255, 255, 255));
+        managerName.setText(" Manager name: mohamad isa");
+        profileInfo.add(managerName, java.awt.BorderLayout.CENTER);
+
+        menuHide.add(profileInfo, java.awt.BorderLayout.PAGE_END);
+
+        massages.setBackground(new java.awt.Color(25, 29, 74));
+        menuHide.add(massages, java.awt.BorderLayout.CENTER);
 
         menu.add(menuHide, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(menu, java.awt.BorderLayout.LINE_START);
 
         main.setBackground(new java.awt.Color(73, 128, 242));
+        main.setLayout(new java.awt.BorderLayout());
 
-        javax.swing.GroupLayout mainLayout = new javax.swing.GroupLayout(main);
-        main.setLayout(mainLayout);
-        mainLayout.setHorizontalGroup(
-            mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 505, Short.MAX_VALUE)
-        );
-        mainLayout.setVerticalGroup(
-            mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 501, Short.MAX_VALUE)
-        );
+        headerForMain.setBackground(new java.awt.Color(73, 128, 242));
+        headerForMain.setPreferredSize(new java.awt.Dimension(485, 150));
+        headerForMain.setLayout(new java.awt.BorderLayout());
+
+        jPanel3.setPreferredSize(new java.awt.Dimension(485, 50));
+        jPanel3.setLayout(new java.awt.GridLayout());
+        headerForMain.add(jPanel3, java.awt.BorderLayout.PAGE_END);
+
+        main.add(headerForMain, java.awt.BorderLayout.PAGE_START);
 
         getContentPane().add(main, java.awt.BorderLayout.CENTER);
 
@@ -322,6 +384,14 @@ public class manager_page extends javax.swing.JFrame {
          changecolor(linemenu, new Color(5, 10, 46));
     }//GEN-LAST:event_IconMenuMouseExited
 
+    private void profilePicMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profilePicMouseEntered
+        changecolor(profilePage, new Color(153,153,153));
+    }//GEN-LAST:event_profilePicMouseEntered
+
+    private void profilePicMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profilePicMouseExited
+        changecolor(profilePage, new Color(25,29,74));
+    }//GEN-LAST:event_profilePicMouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -362,8 +432,12 @@ public class manager_page extends javax.swing.JFrame {
     private javax.swing.JPanel closeButton;
     private javax.swing.JLabel closeIcon;
     private javax.swing.JPanel header;
+    private javax.swing.JPanel headerForMain;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel linemenu;
     private javax.swing.JPanel main;
+    private javax.swing.JLabel managerName;
+    private javax.swing.JPanel massages;
     private javax.swing.JPanel maxButton;
     private javax.swing.JLabel maxIcone;
     private javax.swing.JPanel menu;
@@ -373,5 +447,9 @@ public class manager_page extends javax.swing.JFrame {
     private javax.swing.JPanel minButton;
     private javax.swing.JLabel minIcon;
     private javax.swing.JPanel minMaxCloseIcon;
+    private javax.swing.JPanel profile;
+    private javax.swing.JPanel profileInfo;
+    private javax.swing.JPanel profilePage;
+    private javax.swing.JLabel profilePic;
     // End of variables declaration//GEN-END:variables
 }
